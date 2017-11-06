@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  if session.user
+    p Welcome #{session.user.username}
+  h1= "Pokemon"

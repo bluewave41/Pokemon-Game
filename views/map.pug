@@ -1,0 +1,15 @@
+extends layout
+
+block append head
+  script(src="/javascripts/map.js")
+
+block content
+  h1= "Littleroot Town"
+  -var x = 1;
+  div#map
+    each val, index in data
+      img(class="tile" src=`../images/${folder}/${val}.png`)
+      if x++%20 == 0
+        br
+        
+  div#encounter

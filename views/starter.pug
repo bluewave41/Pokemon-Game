@@ -1,0 +1,34 @@
+extends layout
+
+block append head
+  script(src="/javascripts/starter.js")
+block content
+  h1 Welcome #{session.user.username}! Please select your starter Pokemon.
+  - var starterNames = ['Bulbasaur', 'Charmander', 'Squirtle']
+  - var starterImages = ['1', '4', '7']
+  
+  table
+    each object in starterImages
+      td
+        img(id=`${object}` src=`/images/pokemon/${object}.png`)
+    tr
+      each object in starterNames
+        td= object
+        
+  p#choice
+    
+  form(action='/game/selectStarter', method='POST')
+    label="Nickname: "
+    input(
+      type='text'
+      name='nickname'
+    )
+    input(
+      type='hidden'
+      id="selected"
+      name='selected'
+    )
+    input(
+      type='submit'
+      value='Submit'
+    )

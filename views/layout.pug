@@ -1,0 +1,22 @@
+doctype html
+html
+  block head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+  body
+    a(href='/') Home
+    |
+    |
+    a(href='/users/login') Login
+    |
+    |
+    a(href='/users/register') Register
+    |
+    |
+    a(href='/users/logout') Logout
+    |
+    |
+    a(href='/party') Party
+    block content

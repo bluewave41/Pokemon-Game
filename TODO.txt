@@ -1,0 +1,6 @@
+Battle system
+Implement trainers and gyms
+Expand Pokemon structure to include more stats
+Develop external program to modify maps more efficiently
+Trade and battle with other players
+Players lists, profiles, etc

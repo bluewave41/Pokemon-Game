@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= "Pokemon"
+  each object in pokemon
+    img(src=`/images/pokemon/${object.id}.png`)
+    p= object.nickname
+    p= object.name

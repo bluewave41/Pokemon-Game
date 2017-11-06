@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= "Login"
+  if errors
+    p= errors
+  form(action='/users/load', method='POST')
+    label= 'Username'
+    br
+    input(
+      type='text'
+      name='username'
+    )
+    br
+    label= 'Password'
+    br
+    input(
+      type='text'
+      name='password'
+    )
+    br
+    input(
+      type='submit'
+      value='Submit'
+    )
